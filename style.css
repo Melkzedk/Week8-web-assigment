@@ -6,9 +6,21 @@
   font-family: Arial, sans-serif;
 }
 
+/* Full-height flex layout for sticky footer */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   line-height: 1.6;
   color: #333;
+}
+
+/* Ensure main grows to fill available space */
+main {
+  flex: 1;
 }
 
 /* Navbar */
@@ -98,6 +110,7 @@ body {
   padding: 2rem;
   max-width: 900px;
   margin: auto;
+  flex: 1; /* ensures content takes up space so footer stays at bottom */
 }
 
 /* Form */
@@ -131,7 +144,6 @@ footer {
   padding: 1rem;
   background: #006400;
   color: #fff;
-  margin-top: 20px;
 }
 
 /* Responsive */
