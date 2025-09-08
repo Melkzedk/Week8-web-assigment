@@ -6,7 +6,6 @@
   font-family: Arial, sans-serif;
 }
 
-/* Full-height flex layout for sticky footer */
 html, body {
   height: 100%;
   display: flex;
@@ -18,7 +17,6 @@ body {
   color: #333;
 }
 
-/* Ensure main grows to fill available space */
 main {
   flex: 1;
 }
@@ -56,42 +54,17 @@ main {
   color: #ffd700;
 }
 
-/* Hero Section */
-.hero {
-  background: url("images/hero.jpg") no-repeat center center/cover;
-  color: #fff;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.hero .btn {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #ffd700;
-  color: #333;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Slider */
-/* Slider */
-.slider {
-  position: relative;        /* keep layout intact */
-  overflow: hidden;
+/* Hero with slider background */
+.hero-slider {
+  position: relative;
   width: 100%;
-  height: 400px;             /* fixed height for smooth animation */
-  margin: 20px auto;
+  height: 80vh;
+  overflow: hidden;
 }
 
 .slides {
   display: flex;
-  width: 300%;               /* 3 images */
+  width: 300%; /* 3 images */
   height: 100%;
   animation: slide 12s infinite;
 }
@@ -109,37 +82,42 @@ main {
   100% { transform: translateX(0); }
 }
 
-/* Content */
-.content {
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
-  flex: 1; /* ensures content takes up space so footer stays at bottom */
+/* Overlay text */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
 }
 
-/* Form */
-form {
-  display: flex;
-  flex-direction: column;
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-form input, form textarea {
-  margin-bottom: 1rem;
-  padding: 10px;
-  border: 1px solid #ccc;
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+.hero-content .btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ffd700;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
   border-radius: 5px;
 }
 
-form button {
-  padding: 10px;
-  background: #006400;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-form button:hover {
-  background: #228B22;
+.hero-content .btn:hover {
+  background: #ffcc00;
 }
 
 /* Footer */
@@ -157,7 +135,15 @@ footer {
     align-items: center;
   }
 
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
   .slides img {
-    height: 250px;
+    height: 60vh;
   }
 }
