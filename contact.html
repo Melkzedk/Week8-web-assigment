@@ -25,22 +25,12 @@
       <p>We’d love to hear from you! Please fill out the form below:</p>
 
       <form id="contactForm">
-        <input 
-          type="text" 
-          name="name" 
-          placeholder="Your Name" 
-          required 
-        />
-        <input 
-          type="email" 
-          name="email" 
-          placeholder="Your Email" 
-          required 
-        />
-        <textarea 
-          name="message" 
-          rows="5" 
-          placeholder="Your Message" 
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Your Message"
           required
         ></textarea>
         <button type="submit">Send Message</button>
@@ -69,7 +59,11 @@
         }
 
         // Simulate form submission
-        alert("Thank you for contacting us, " + name + "! We'll get back to you soon.");
+        alert(
+          "Thank you for contacting us, " +
+            name +
+            "! We'll get back to you soon."
+        );
         form.reset();
       });
     </script>
