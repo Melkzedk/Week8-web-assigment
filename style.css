@@ -80,21 +80,25 @@ main {
 }
 
 /* Slider */
+/* Slider */
 .slider {
+  position: relative;        /* keep layout intact */
   overflow: hidden;
-  max-width: 100%;
+  width: 100%;
+  height: 400px;             /* fixed height for smooth animation */
   margin: 20px auto;
 }
 
 .slides {
   display: flex;
-  width: 300%;
+  width: 300%;               /* 3 images */
+  height: 100%;
   animation: slide 12s infinite;
 }
 
 .slides img {
   width: 100%;
-  height: 400px;
+  height: 100%;
   object-fit: cover;
 }
 
